@@ -34,3 +34,7 @@ def main():
   if operation_choice not in operation:
     print("Invalid choice. Please select a valid choice operation.")
     return
+    
+  operation = operations[operation_choice]
+  score = 0
+  
