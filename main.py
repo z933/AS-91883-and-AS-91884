@@ -31,10 +31,22 @@ def main():
       "3": "*",
       "4": "/",
   }
-  if operation_choice not in operation:
+  if operation_choice not in operations:
     print("Invalid choice. Please select a valid choice operation.")
     return
     
   operation = operations[operation_choice]
   score = 0
-  
+
+  for _ in range(10):
+      question, correct_answer = generate_question(operation)
+      user_answer = input(f"What is {question}? ")
+      if validate_answer(user_answer, correct_answer):
+        print("Correct!")
+        score += 1
+      else: 
+        print(f"wrong! The correct Answer was: {correct_answer}.")
+        
+  print(f"Quiz completed. Your score is: {score}/10")
+
+main()
