@@ -10,5 +10,8 @@ def generate_question(operation):
     return f"{num1} - {num2}", num1 - num2
   elif operation == "*":
     return f"{num1} * {num2}", num1 * num2
-  elif operation "/":
+  elif operation == "/":
     return f"{num1} / {num2}", num1 / num2
+
+def validate_answer(user_answer, correct_answer):
+  return int(user_answer) == correct_answer
