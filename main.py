@@ -44,14 +44,14 @@ def main(): # Main Program
       "4": "/",
   }
   if operation_choice not in operations:
-    print("Invalid choice. Please select a valid choice operation.") # Prints an error message
-    return 
+    print("Invalid choice. Please select a valid choice operation.") # Prints error message
+    return main() # Returns to the main() function
 # Sequence Three(): Answer and Score Generator
 # Purpose: Generates the answer and score for the user
 # Author: Carl Bombales
 # Date: 8/11/2023
 # Version 6.11.23
-  operation = operations[operation_choice] # This variable is used to identify the operation that the user chose.
+  operation = operations[operation_choice] # identifies the operation that the user chose.
   score = 0 # Score function    
   for _ in range(10): # Loops the question 10 times.
       try:
